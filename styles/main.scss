@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$primary-color: #212529;
+$secondary-color: #ffffff;
+$accent-color: #8a5e36;
+$font-family-primary: 'Barlow', sans-serif;
+
+body{
+    font-family: $font-family-primary;
+    color: $primary-color;
+    background-color: $secondary-color;
+    a {
+        color: $primary-color;
+        &:hover{
+            color: $accent-color;
+        }
+    }
+}
