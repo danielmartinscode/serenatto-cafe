@@ -1,5 +1,6 @@
 @use "../base/variables";
 @use "../utils/mixins";
+@use '../utils/function';
 
 input,
 select {
@@ -18,7 +19,7 @@ select {
   &:focus {
     border-color: variables.$accent-color;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(variables.$accent-color, 0.25);
+    box-shadow: function.custom-box-shadow(0, rgba(variables.$accent-color, 0.25));
   }
 }
 .form-group {
