@@ -15,6 +15,14 @@ select {
   border: 1px solid variables.$form-border-color;
   border-radius: variables.$border-radius;
   @include mixins.transition(border-color, box-shadow);
+  @include mixins.respond-to(small) {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+  @include mixins.respond-to(medium) {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
 
   &:focus {
     border-color: variables.$accent-color;
@@ -27,6 +35,9 @@ select {
   label {
     display: block;
     margin: 0.5rem;
+    @include mixins.respond-to(small) {
+      margin: 0.25rem;
+    }
   }
 }
 .contact {
@@ -34,6 +45,12 @@ select {
   h3 {
     text-align: center;
     margin-bottom: variables.$margin-bottom-regular;
+    @include mixins.respond-to(small) {
+      font-size: 1.25rem;
+    }
+    @include mixins.respond-to(medium) {
+      font-size: 1.5rem;
+    }
   }
   .contact-container {
     width: 50%;
@@ -43,5 +60,15 @@ select {
     border-radius: 0.5rem;
     padding: variables.$padding-regular;
     margin: 3rem auto;
+    @include mixins.respond-to(small) {
+      padding: variables.$padding-regular;
+      margin: 3rem auto;
+      width: 75%;
+    }
+    @include mixins.respond-to(medium) {
+      padding: variables.$padding-regular;
+      margin: 3rem auto;
+      width: 75%;
+    }
   }
 }
